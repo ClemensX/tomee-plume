@@ -36,7 +36,7 @@ public class MoviesTest extends TestCase {
 
         final Context context = EJBContainer.createEJBContainer(p).getContext();
 
-        Movies movies = (Movies) context.lookup("java:global/jpa-eclipselink/Movies");
+        Movies movies = (Movies) context.lookup("java:global/tomeetest/Movies");
 
         movies.addMovie(new Movie("Quentin Tarantino", "Reservoir Dogs", 1992));
         movies.addMovie(new Movie("Joel Coen", "Fargo", 1996));
