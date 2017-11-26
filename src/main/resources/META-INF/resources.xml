@@ -1,0 +1,11 @@
+<resources>
+
+  <Resource id="jdbc/tomtest" type="javax.sql.DataSource">
+    JdbcDriver org.hsqldb.jdbcDriver
+    JdbcUrl jdbc:hsqldb:mem:client1
+    UserName sa
+    Password
+    JtaManaged true
+  </Resource>
+
+</resources>
