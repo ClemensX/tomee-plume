@@ -1,0 +1,27 @@
+---
+applications:
+
+- name: rest-cdi
+  memory: 1024M
+  host: rest-cdi
+  buildpack: https://github.com/cloudfoundry-community/tomee-buildpack.git
+  path: target/tomee-test-1.0.0.war
+  env:
+    JBP_CONFIG_TOMEE: '{ tomee: { version: 7.0.4 } }'
+
+
+#  buildpack: java_buildpack
+#    SAP_JWT_TRUST_ACL: '[{"clientid" : "*", "identityzone" : "*"}]'
+#    SAP_SCC_LOCATION_IDS: '[""]'
+#    SAP_SCC_VIRTUAL_HOSTS: '["http://dtr2020.wdf.sap.corp:50000"]'
+
+#  services:
+#    - rbs_regservice_uaa
+#    - rbs-postgres-service
+#    - connectivityService
+
+#  - your-application-logs-service
+#  - your-auditlog-service
+#   path: application/target/backend-application.war
+#    SAP_SCC_VIRTUAL_HOSTS: '["https://i7p.wdf.sap.corp:443"]'
+
