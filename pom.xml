@@ -109,6 +109,12 @@
       <version>2.6.3</version>
       <scope>compile</scope>
     </dependency>
+    <dependency>
+      <groupId>org.apache.tomee</groupId>
+      <artifactId>openejb-cxf-rs</artifactId>
+      <version>7.0.4</version>
+      <scope>compile</scope>
+    </dependency>
   </dependencies>
   <!--
   This section allows you to configure where to publish libraries for sharing.
