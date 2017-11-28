@@ -1,10 +1,11 @@
 <resources>
 
   <Resource id="jdbc/tomtest" type="javax.sql.DataSource">
-    JdbcDriver org.hsqldb.jdbcDriver
-    JdbcUrl jdbc:hsqldb:mem:client1
-    UserName sa
-    Password
+    JdbcDriverX ${rbs_jdbc_driver}org.hsqldb.jdbcDriver
+    JdbcDriver org.postgresql.Driver
+    JdbcUrl ${rbs_jdbc_url}
+    UserName ${rbs_jdbc_user}
+    Password ${rbs_jdbc_password}
     JtaManaged true
   </Resource>
 

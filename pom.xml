@@ -109,6 +109,12 @@
       <version>2.6.3</version>
       <scope>compile</scope>
     </dependency>
+	<dependency>
+		<groupId>org.postgresql</groupId>
+		<artifactId>postgresql</artifactId>
+		<version>9.4.1212</version>
+           <scope>compile</scope>
+	</dependency>
     <dependency>
       <groupId>org.apache.tomee</groupId>
       <artifactId>openejb-cxf-rs</artifactId>
