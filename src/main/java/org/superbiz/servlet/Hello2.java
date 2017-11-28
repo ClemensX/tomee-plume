@@ -43,21 +43,21 @@ public class Hello2 extends HttpServlet {
 		Movie movie = new Movie("Quentin Tarantino", "Reservoir Dogs", 1992);
 		response.getWriter().append("ok\n");
 
-		response.getWriter().append("Persist... ");
-		try {
-			// entityManager.getTransaction().begin();
-			entityManager.persist(movie);
-			// entityManager.getTransaction().commit();
-			response.getWriter().append("ok\n");
-		} catch (Throwable t) {
-			System.out.println(t.getMessage());
-			t.printStackTrace();
-			response.getWriter().append("failed!!!\n");
-		}
+		response.getWriter().append("Persist... not executed");
+//		try {
+//			// entityManager.getTransaction().begin();
+//			entityManager.persist(movie);
+//			// entityManager.getTransaction().commit();
+//			response.getWriter().append("ok\n");
+//		} catch (Throwable t) {
+//			System.out.println(t.getMessage());
+//			t.printStackTrace();
+//			response.getWriter().append("failed!!!\n");
+//		}
 		//Movies movies = (Movies) context.lookup("java:global/tomeetest/Movies");
 
 		response.getWriter().append("\nInjected EJB: " + movies);
-		response.getWriter().append("Persist via ejb... ");
+		response.getWriter().append("\nPersist via ejb... ");
 		try {
 			movies.addMovie(new Movie("Quentin Tarantino", "Reservoir Dogs", 1992));
 			response.getWriter().append("ok\n");

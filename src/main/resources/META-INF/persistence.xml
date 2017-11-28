@@ -24,11 +24,9 @@
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <jta-data-source>movieDatabase</jta-data-source>
     <non-jta-data-source>movieDatabaseUnmanaged</non-jta-data-source>
-<!--     <class>org.superbiz.eclipselink.Movie</class> -->
     <properties>
-      <property name="eclipselink.target-database" value="org.eclipse.persistence.platform.database.HSQLPlatform"/>
-      <property name="eclipselink.ddl-generation" value="create-tables"/>
-      <property name="eclipselink.ddl-generation.output-mode" value="database"/>
+      <!-- change to 'create' to keep entries and manual schema alteration -->
+      <property name="javax.persistence.schema-generation.database.action" value="drop-and-create" />
 	  <property name="eclipselink.logging.level" value="FINE"/>
     </properties>
   </persistence-unit>

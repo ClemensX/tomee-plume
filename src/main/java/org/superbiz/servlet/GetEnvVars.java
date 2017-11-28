@@ -19,7 +19,9 @@ public class GetEnvVars extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.getWriter().append("\nhugo_jdbc_url: ").append(System.getenv("hugo_jdbc_url"));
+		response.getWriter().append("\nrbs_jdbc_url: ").append(System.getenv("rbs_jdbc_url"));
+		response.getWriter().append("\nrbs_jdbc_user: ").append(System.getenv("rbs_jdbc_user"));
+		response.getWriter().append("\nrbs_jdbc_password: ").append(System.getenv("rbs_jdbc_password"));
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
