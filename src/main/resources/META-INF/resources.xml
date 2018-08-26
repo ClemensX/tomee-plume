@@ -1,11 +1,17 @@
 <resources>
 
-  <Resource id="jdbc/tomtest" type="javax.sql.DataSource">
+<!--   <Resource id="jdbc/tomtest" type="javax.sql.DataSource">
     JdbcDriverX ${rbs_jdbc_driver}org.hsqldb.jdbcDriver
     JdbcDriver org.postgresql.Driver
     JdbcUrl ${rbs_jdbc_url}
     UserName ${rbs_jdbc_user}
     Password ${rbs_jdbc_password}
+    JtaManaged true
+  </Resource>
+ -->
+   <Resource id="jdbc/tomtest" type="javax.sql.DataSource">
+    JdbcDriver org.hsqldb.jdbcDriver
+    JdbcUrl jdbc:hsqldb:mem:moviedb
     JtaManaged true
   </Resource>
 
